@@ -35,6 +35,12 @@ public class GeneralController {
                                                         .name("TV")
                                                         .description("Appliance")
                                                         .unitPrice(350)
+                                                        .build(),
+                                                Product.builder()
+                                                        .id(UUID.randomUUID().toString())
+                                                        .name("Car")
+                                                        .description("Vehicle")
+                                                        .unitPrice(68000)
                                                         .build());
         return ResponseEntity.ok(products);
     }

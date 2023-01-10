@@ -22,7 +22,7 @@ class GeneralControllerTests {
     @Test
     void checkIfProductsAreNotEmpty() {
         ResponseEntity<List<Product>> productsResponseEntity = generalController.getProducts();
-        Assertions.assertEquals(3, productsResponseEntity.getBody().size());
+        Assertions.assertEquals(4, productsResponseEntity.getBody().size());
     }
 
 }
