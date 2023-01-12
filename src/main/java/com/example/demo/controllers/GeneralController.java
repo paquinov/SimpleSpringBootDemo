@@ -41,6 +41,12 @@ public class GeneralController {
                                                         .name("Car")
                                                         .description("Vehicle")
                                                         .unitPrice(68000)
+                                                        .build(),
+                                                Product.builder()
+                                                        .id(UUID.randomUUID().toString())
+                                                        .name("PC")
+                                                        .description("Working tool")
+                                                        .unitPrice(1250)
                                                         .build());
         return ResponseEntity.ok(products);
     }
