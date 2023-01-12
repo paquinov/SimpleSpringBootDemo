@@ -20,15 +20,18 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+  displayName: 'Building and running tests'
 
 - task: CopyFiles@2
   inputs:
     SourceFolder: 'target'
     Contents: '*.jar'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Copying jar file'
 
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+  displayName: 'Publishing artifact'
