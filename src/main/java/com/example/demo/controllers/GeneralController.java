@@ -47,6 +47,12 @@ public class GeneralController {
                                                         .name("PC")
                                                         .description("Working tool")
                                                         .unitPrice(1250)
+                                                        .build(),
+                                                Product.builder()
+                                                        .id(UUID.randomUUID().toString())
+                                                        .name("Stereo")
+                                                        .description("Fun")
+                                                        .unitPrice(750)
                                                         .build());
         return ResponseEntity.ok(products);
     }
